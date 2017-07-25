@@ -204,6 +204,7 @@ window.addEventListener('hashchange', function(e){
     setTimeout(() => renderStudents(students),2000);
 
   } else if (!findStudentByLastName(location.hash.slice(1))){
+    clearStudentsList();
     clearStudentInfo();
     showLoader(true);
     setTimeout(() => showLoader(false),2000);
